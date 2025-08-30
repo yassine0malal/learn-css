@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+
+    <style>
+        .border {
+            border: solid red 2px;
+        }
+
+        .flexed {
+            display: flex;
+        }
+
+        .menu {
+            background-color: rgba(200, 200, 200, 0.141);
+            font-weight: bold;
+            margin: 15px;
+            margin-top: 4rem;
+            padding: 1rem 1rem;
+            list-style-type: none;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: rgb(15, 195, 15);
+        }
+
+        .line {
+            list-style-type: none;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+
+        }
+
+        .item {
+            text-align: center;
+        }
+
+        .card:first-of-type{
+            background-color:rgb(254,193,203);
+
+        }
+
+
+        @media (max-width:400px) {
+            .card .line{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .line{
+                gap: 20px;
+            }
+            
+        }
+        @media (max-width:800px) {
+            .card .line img{
+                width: 120px;
+            }
+            .line{
+                gap: 20px;
+            }
+            
+        }
+        /* menu of the nav bar for the small displays */
+        @media (max-width:260px) {
+            nav .menu {
+                flex-direction: column;
+            }
+            .line{
+                gap: 20px;
+            }
+            img{
+                width: 50px;
+            }
+             .menu a {
+                padding-top: 30px;
+                
+            }
+            .menu{
+                justify-content: center;
+                align-items: center;
+            }
+            
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul class="menu flexed border">
+            <li>
+                <a href="">Rank</a>
+            </li>
+            <li>
+                <a href="">Artist</a>
+            </li>
+            <li>
+                <a href="">Title</a>
+            </li>
+            <li>
+                <a href="">Album</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="card">
+        <div class="flexed border">
+            <ul class="flexed line">
+                <li class="item">
+                    1
+                </li>
+                <li class="item">
+                    The Bealts
+                </li>
+                <li class="item">
+                    Sgt.Pepper's Lonely Hearts Club Band
+                </li>
+                <li class="">
+                    <img src="image.png" width="150" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="flexed ">
+            <ul class="flexed line">
+                <li class="item">
+                    1
+                </li>
+                <li class="item">
+                    The Bealts
+                </li>
+                <li class="item">
+                    Sgt.Pepper's Lonely Hearts Club Band
+                </li>
+                <li class="">
+                    <img src="image.png" width="150" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="flexed ">
+            <ul class="flexed line">
+                <li class="item">
+                    1
+                </li>
+                <li class="item">
+                    The Bealts
+                </li>
+                <li class="item">
+                    Sgt.Pepper's Lonely Hearts Club Band
+                </li>
+                <li class="">
+                    <img src="image.png" width="150" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="flexed border">
+            <ul class="flexed line">
+                <li class="item">
+                    1
+                </li>
+                <li class="item">
+                    The Bealts
+                </li>
+                <li class="item">
+                    Sgt.Pepper's Lonely Hearts Club Band
+                </li>
+                <li class="">
+                    <img src="image.png" width="150" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="flexed border">
+            <ul class="flexed line">
+                <li class="item">
+                    1
+                </li>
+                <li class="item">
+                    The Bealts
+                </li>
+                <li class="item">
+                    Sgt.Pepper's Lonely Hearts Club Band
+                </li>
+                <li class="">
+                    <img src="image.png" width="150" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+        <div class="flexed border">
+            <ul class="flexed line">
+                <li class="item">
+                    1
+                </li>
+                <li class="item">
+                    The Bealts
+                </li>
+                <li class="item">
+                    Sgt.Pepper's Lonely Hearts Club Band
+                </li>
+                <li class="">
+                    <img src="image.png" width="150" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const count = 0;
+        const elements = document.getElementsByClassName("card");
+        [...elements].forEach(function(element){
+            if(count % 2 == 0){
+                console.log(element)
+                count++;
+            }
+        });
+    </script>
+</body>
+
+</html>
