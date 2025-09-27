@@ -1,0 +1,149 @@
+
+ /* start global css */
+
+*{
+   margin: 0;
+   font-family: "Work Sans", sans-serif;
+}
+
+ .container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ html{
+   scroll-behavior: smooth;
+ }
+
+ .header{
+   background-color: #f6f6f6;
+   padding: 20px;
+ }
+ 
+ /* Fin global css */
+
+
+ .header .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+
+ }
+ 
+ .header .container .links{
+   display: flex;
+   flex-wrap: wrap;
+   /* justify-content: flex-end; */
+   width: 30px;
+   margin: 0;
+   padding: 0;
+   }
+
+ .header .container .links span{
+   background-color: #333;
+   padding-bottom: 2px;
+   margin-bottom: 5px;
+   transition: 0.3s;
+   width: 100%;
+ }
+
+
+ .header .container .logo{
+   font-size: 13px;
+   padding: 0;
+   margin: 0;
+ }
+ .header .container .links span:nth-child(2){
+   width: 60%;
+ }
+
+
+/* Faire apparaître .nav-links quand on survole .links ou quand on survole .nav-links
+  Cela évite que le menu disparaisse lorsqu'on se déplace de l'icône vers la liste. */
+.header .container .links:hover + .nav-links,
+.header .container .nav-links:hover {
+  display: block;
+}
+
+.header .container .links:hover span:nth-child(2) {
+   width: 100%;
+ }
+
+ .header .container .nav-links::before{
+   content: "";
+   top: -24px;
+   left: 4px;
+   border-width: 12px;
+   border-style: solid;
+   border-color: transparent transparent #eee  transparent;
+   position: absolute;
+   z-index: 1;
+ }
+
+  .header .container .nav-links{
+   list-style-type: none;
+   position: absolute;
+   background-color: #eee; 
+  
+   left: 15px;
+   padding: 0;
+   top: 50px;
+   height: auto;
+   z-index: 1;
+   display: none;
+   /* letter-spacing: 2px; */
+ }
+
+  .header .container .nav-links{
+   margin: 0;
+   padding: 0;
+   min-width: 200px;
+  }
+ .header .container .nav-links li{
+ 
+   cursor: pointer;
+   line-height: 1.8;
+   padding-right:20px;
+   padding-left:10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   font-size: 15px;
+   /* text-align:center; */
+}
+
+ .header .container .nav-links li:not(:last-child){
+   border-bottom: 1px solid #ccc;
+ }
+
+.header .container .nav-links li:hover{
+   transition: 0.3s;
+   padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+ @media(min-width:767px){
+    .container{
+        width: 750px;
+    }
+ }
+ @media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+ }
+ @media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+ }
+
+ 
